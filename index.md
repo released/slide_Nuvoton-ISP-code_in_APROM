@@ -6,7 +6,7 @@
 
 > 說明 boot code 與 application 都位於 APROM 時的 UART IAP 架構，包含 Flash 分區、啟動判斷、映像檔產生、checksum 與 ICP / ISP 工具操作。
 
-## 閱讀重點
+## 內容摘要
 
 - 先確認 boot region 與 application region 的起始位址、大小與 vector 配置。
 - 再沿著 boot decision、image transfer、erase、program、verify 與 reset 流程閱讀。
@@ -14,7 +14,7 @@
 
 ## Reference Project
 
-This training material is based on the **below reference project**:
+This page references the following project:
 
 - [M2A23BSP_IAP_UART_APROM](https://github.com/released/M2A23BSP_IAP_UART_APROM)
 
@@ -114,7 +114,7 @@ flowchart TD
 ![](img/boot_upgrade_finish.jpg)
 
 
-### Key point training emphasis
+### Implementation points
 
 * **Protocol parsing and policy are separated**
   * `isp_user.c` → packet handling
@@ -310,7 +310,7 @@ Progress bar width=10:
 
 <a id="article_summary"></a>
 
-## 7. Summary training takeaway
+## 7. Summary
 
 * Boot is **policy-driven** `isp_config.c`
 * Application controls update entry by **checksum invalidation**
